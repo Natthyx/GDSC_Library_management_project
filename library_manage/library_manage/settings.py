@@ -1,5 +1,5 @@
 
-
+import dj_database_url
 from pathlib import Path
 
 import os
@@ -76,8 +76,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-
+DATABASES["default"] = dj_database_url.parse("postgres://library_management_db_user:wprpOUtNPkIM9UXiUiIXMwXyv8GOnKvd@dpg-cnve4r5a73kc73c8atvg-a.oregon-postgres.render.com/library_management_db")
+# 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
